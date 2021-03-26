@@ -1,8 +1,9 @@
 {
-  "name": "vanilla-basic",
-  "version": "1.0.0",
-  "description": "",
+  "name": "static-example-api",
+  "version": "0.0.5",
+  "description": "An example API for static tests and data retrieval",
   "scripts": {
+    "build": "func start",
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
