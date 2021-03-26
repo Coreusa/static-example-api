@@ -1,4 +1,4 @@
-module.exports = async function (context, req) {
+module.exports = async function(context, req) {
   const questions = [
     'Will people look for entertainment online more than they do today?',
     'Who is your favorite racer this season?',
@@ -15,8 +15,7 @@ module.exports = async function (context, req) {
     'Training every day is important for both physical and mental health',
     'How has the internet affected your work?'
   ]
-  const options = [
-    {
+  const options = [{
       text: 'Like today',
       value: 5
     },
@@ -27,7 +26,7 @@ module.exports = async function (context, req) {
     {
       text: 'Not sure',
       value: null
-    },   
+    },
     {
       text: 'Totally agree',
       value: 5
@@ -73,8 +72,8 @@ module.exports = async function (context, req) {
       value: 5
     }
   ]
-  
-  let shuffled = questions.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1])
+
+  let shuffled = questions.map((a) => [Math.random(), a]).sort((a, b) => a[0] - b[0]).map((a) => a[1])
 
   shuffled = shuffled.map(e => {
     return {
@@ -86,8 +85,11 @@ module.exports = async function (context, req) {
   // User answer
   // Answer value
   context.res = {
+    headers: {
+      'Content-Type': 'application/json'
+    },
     body: {
       answers: shuffled
     }
   };
-  };
+};

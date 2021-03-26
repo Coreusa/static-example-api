@@ -2,7 +2,7 @@
     "liveServer.settings.proxy": {
         "enable": true,
         "baseUri": "/api",
-        "proxyUri": "http://127.0.0.1:7071/api"
+        "proxyUri": "http://localhost:8080/api"
      },
     "azureFunctions.deploySubpath": ".",
     "azureFunctions.postDeployTask": "npm install",
